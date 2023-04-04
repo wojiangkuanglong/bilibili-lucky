@@ -1,5 +1,5 @@
-const puppeteer = require("puppeteer");
-const fetch = require("node-fetch");
+import puppeteer from "puppeteer";
+import fetch from "node-fetch";
 // 图鉴api
 const apiUrl = "http://api.ttshitu.com/predict";
 // 大锦鲤专栏页面
@@ -107,9 +107,8 @@ async function clickOnMultipleCoordinates(page, coordinates) {
   const coordinateRes = await getCoordinate(page);
 
   if (coordinateRes.success) {
-    console.log(coordinateRes.coordinate);
     await clickOnMultipleCoordinates(page, coordinateRes.coordinate);
-    await sleep(2000);
+    await sleep(5000);
     const newestLuckyDrawUrl = async () => {
       await page.goto(baseUrl);
       await page.waitForSelector(".article-wrap");

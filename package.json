@@ -4,6 +4,7 @@
   "description": "B站抽奖脚本",
   "main": "index.js",
   "url": "https://github.com/wojiangkuanglong/bilibili-lucky",
+  "type": "module",
   "scripts": {
     "start": "node -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
