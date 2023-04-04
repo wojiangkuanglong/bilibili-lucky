@@ -21,11 +21,11 @@ jobs:
       - name: 安装依赖
         run: |
           brew install chromium
-          yarn add puppeteer node-fetch
+          yarn add puppeteer node-fetch dotenv
       - name: 运行抽奖脚本
         env:
           ACCOUNT: ${{ secrets.ACCOUNT }}
           PASSWORD: ${{ secrets.PASSWORD }}
           TUJIAN_ACCOUNT: ${{ secrets.TUJIAN_ACCOUNT }}
           TUJIAN_PASSWORD: ${{ secrets.TUJIAN_PASSWORD }}
-        run: node index.js
+        run: npm run start
