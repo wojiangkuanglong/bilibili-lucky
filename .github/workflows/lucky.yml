@@ -1,0 +1,31 @@
+name: bilibili-lucky
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      my_input:
+        description: '手动运行'
+        required: true
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: 安装依赖
+        run: |
+          brew install chromium
+          yarn add puppeteer node-fetch
+        env:
+          ACCOUNT: ${{ secrets.ACCOUNT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          TUJIAN_ACCOUNT: ${{ secrets.TUJIAN_ACCOUNT }}
+          TUJIAN_PASSWORD: ${{ secrets.TUJIAN_PASSWORD }}
+      - name: 运行抽奖脚本
+        run: node index.js
