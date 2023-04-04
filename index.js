@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 const apiUrl = "http://api.ttshitu.com/predict";
 // 大锦鲤专栏页面
 const baseUrl = "https://space.bilibili.com/226257459/article";
-
+console.log(process.env.ACCOUNT);
 function sleep(interval) {
   return new Promise((resolve) => {
     setTimeout(resolve, interval);
