@@ -1,0 +1,26 @@
+{
+  "name": "bilibili-lucky",
+  "version": "1.0.0",
+  "description": "B站抽奖脚本",
+  "main": "index.js",
+  "url": "https://github.com/wojiangkuanglong/bilibili-lucky",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojiangkuanglong/bilibili-lucky.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wojiangkuanglong/bilibili-lucky/issues"
+  },
+  "homepage": "https://github.com/wojiangkuanglong/bilibili-lucky#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-fetch": "^2.6.9",
+    "puppeteer": "^19.8.3"
+  }
+}
