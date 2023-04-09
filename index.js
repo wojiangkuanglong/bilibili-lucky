@@ -158,9 +158,9 @@ async function clickOnMultipleCoordinates(page, coordinates) {
           !isChecked &&
             (await page.click(".bili-user-profile-view__info__button"));
           await sleep(2000);
-          // 由于有些文案过长，浏览器滚动条向下滑动400px
+          // 由于有些文案过长，浏览器滚动条向下滑动1000px
           await page.evaluate(() => {
-            window.scrollBy(0, 400);
+            window.scrollBy(0, 1000);
           });
           await sleep(2000);
           // 评论
