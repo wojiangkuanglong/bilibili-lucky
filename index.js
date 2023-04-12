@@ -124,7 +124,7 @@ async function clickOnMultipleCoordinates(page, coordinates) {
       await page.waitForSelector("#article-content");
       const newList = await page.evaluate(() => {
         let data = [];
-        let elements = document.querySelectorAll(".article-link");
+        let elements = document.querySelectorAll("#read-article-holder a[href^='https://t.bilibili.com']");
         for (let i = 0; i < elements.length; i++) {
           let url = elements[i].getAttribute("href");
           data.push(url);
