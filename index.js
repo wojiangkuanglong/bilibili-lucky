@@ -58,7 +58,7 @@ async function getCoordinate(page) {
   });
   const data = await response.json();
   return {
-    success: true,
+    success: data.success,
     coordinate: data.data.result.split("|").map(
       (pair) =>
         pair.split(",").map((item, index) => Number(item) + xy[index] - 10) // 10px的偏移量
