@@ -6,8 +6,8 @@
   "url": "https://github.com/wojiangkuanglong/bilibili-lucky",
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx --env-file=.env ./index.ts",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,12 @@
   },
   "homepage": "https://github.com/wojiangkuanglong/bilibili-lucky#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "node-fetch": "^2.6.9",
-    "puppeteer": "^19.8.3"
+    "node-fetch": "^2.7.0",
+    "puppeteer": "^23.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
   }
 }
